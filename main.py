@@ -2,15 +2,15 @@ import requests
 import os
 import platform
 
-if(platform.os == 'Linux'):
+if 'Linux' in platform.os:
     os.system("clear")
 else:
-    os.system("cls")
+    os.system("clear")
 requestedIP = input("Victim's IP: ")
-if(platform.os == 'Linux'):
+if 'Linux' in platform.os:
     os.system("clear")
 else:
-    os.system("cls")
+    os.system("clear")
 response = requests.get(f"https://ipapi.co/{requestedIP}/json")
 ip = response.json()
 print("IP: " + ip['ip'])
